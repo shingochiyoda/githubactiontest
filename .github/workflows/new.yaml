@@ -15,7 +15,5 @@ jobs:
           role-session-name: github-actions-test-session
           aws-region: ap-northeast-1
 
-      - name: deploy
-        run: |
-          yarn install
-          yarn deploy
+      - name: execute AWS CLI
+        run: aws s3 ls
